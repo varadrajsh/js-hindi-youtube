@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="mainTitle">My First JavaScript Learning</h1>
+  <p>Click Below Buttons</p>
+  <button onclick="changeTitle()">Change Title</button>
+  <button onclick="resetTitle()">Reset Title</button>
+  <button onclick="checkStatus()">Check Status</button>
+  <p id="messageAlert">This shows the status</p>
+
+  <script>
+    const mainText = document.getElementById("mainTitle");
+    const originalText = mainText.innerText;
+    const alteredText = "This is Now Altered Title";
+
+
+    function changeTitle(){
+      const message = document.getElementById("messageAlert");
+      if(mainText.innerText === alteredText){
+        message.innerText = "Title has already been changed";
+        message.style.color = "blue"
+      }else{
+        mainText.innerText = alteredText;
+        message.innerText = "Title has successfully changed";
+        message.style.color = "green";
+      }
+      
+    }
+
+    function resetTitle(){
+      
+      const message = document.getElementById("messageAlert");
+
+      if(mainText.innerText === originalText){
+        message.innerText = "No Changes Made"
+        message.style.color = "purple"
+      }else{
+        mainText.innerText = originalText;
+        message.innerText = "Title has been reset";
+        message.style.color = "blue"
+      }
+    }
+
+    function checkStatus(){
+      
+      const message = document.getElementById("messageAlert");
+
+      if(mainText.innerText === originalText){
+        message.innerText= "Title is still original";
+        message.style.color = "green"
+      }else{
+        message.innerText = "Title has been Changed";
+        message.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
