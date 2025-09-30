@@ -115,5 +115,73 @@ const course = {
 const {courseInstructor} = course; //One method with full hand
 const {courseInstructor: instructor} = course; //Another method with short hand
 
-console.log(courseInstructor);
-console.log(instructor); 
+// console.log(courseInstructor);
+// console.log(instructor); 
+
+//Function is JavaScript
+
+function addTwoNumbers(number1, number2){
+    console.log(number1 + number2);
+}
+
+// addTwoNumbers(3, 4) // Pass arugments
+
+// Method 1
+function addAnotherNumber(num1, num2){
+    let result= num1 + num2;
+     return result;
+ } 
+
+const result = addAnotherNumber(3, 5)
+// console.log(result);
+
+
+//Method 2
+function addSomeNumbers(num1, num2){
+    return num1 + num2;
+}
+
+const resultNew = addSomeNumbers(3, 9);
+// console.log(resultNew)
+
+function loginUserMessage(username = "None"){
+    if(!username){                     // (username === undefined)
+        console.log("Please enter user name");
+        return;
+    }else{
+        return `${username} just Logged In`;
+    }
+}
+// console.log(loginUserMessage("Varadraj"));
+
+// How to handle multiple multiple arguments
+
+function calculateCartPrice(val1, val2, ...num){ // {...num} Try first to get all argument in one variable as array
+    return num;
+}
+// console.log(calculateCartPrice(200, 300, 400, 500, 1000));
+
+// Objects Handling
+
+const user = {
+    username: "Varadraj",
+    price: 999
+}
+
+function handleObjects(anyObject){
+    // console.log(`Username is: ${anyObject.username} and price is: ${anyObject.price}`);
+}
+// handleObjects(user); // pass declared object as argument
+handleObjects({         // Pass directly object as argument
+    username: "Varadraj S H",
+    price: 9999
+})
+
+const myNewArray = [200,300,400,500];
+
+function returnSecondArray(getArray){
+    return getArray[2];
+}
+
+// console.log(returnSecondArray(myNewArray)); // Send declared array as argument
+// console.log(returnSecondArray([200,300,400,500]))
