@@ -99,5 +99,21 @@ const users = [
 // console.log(Object.values(fbUser)); // Access objects values and returns Array datatype
 // console.log(Object.entries(fbUser)); // Access objects with keys and values in combined array of each object 
 
-console.log(fbUser.hasOwnProperty("isLoggedIn")); // Result true because entry exists 
-console.log(fbUser.hasOwnProperty("isLogged")); // Result false because entry does not exists 
+// console.log(fbUser.hasOwnProperty("isLoggedIn")); // Result true because entry exists 
+// console.log(fbUser.hasOwnProperty("isLogged")); // Result false because entry does not exists 
+
+// Destructuring Objects
+
+const course = {
+    courseName: "Js Code in Hindi",
+    courseFees: 999,
+    courseInstructor: "Varadraj" 
+}
+
+// console.log(course.courseFees); // Trypical Way
+
+const {courseInstructor} = course; //One method with full hand
+const {courseInstructor: instructor} = course; //Another method with short hand
+
+console.log(courseInstructor);
+console.log(instructor); 
